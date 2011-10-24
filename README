@@ -1,0 +1,22 @@
+!!!This is only support 64bit linux system with cuda!!!
+
+build:
+    make
+
+use:
+    encrypt:
+    ./des -k keyfile -o outputfile sourcefile
+    decrypt:
+    ./des -k keyfile -d -o outputfile sourcefile
+
+    if you want to use gpu to accelerate speed;
+    you can use --gpu switches;
+    for example:
+
+    ./des -k keyfile --gpu -o outputfile sourcefile
+    ./des -k keyfile --gpu -d -o outputfile sourcefile
+
+    on my machine when use cpu the speed is almost 500KB/s.
+    but when use gpu the speed is up to 4MB/s.
+    
+    infact there still spaces to speedup.
