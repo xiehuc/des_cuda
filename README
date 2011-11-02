@@ -9,6 +9,11 @@ use:
     decrypt:
     ./des -k keyfile -d -o outputfile sourcefile
 
+    keyfile:
+    is a plain text file,
+    for example keyfile's content is "1234567812345678"
+    that is a 64bit num which is 0x1234567812345678
+
     if you want to use gpu to accelerate speed;
     you can use --gpu switches;
     for example:
